@@ -5,3 +5,11 @@ m.remove(15)
 m.remove("10")
 print(m)
 #Задание_2
+
+#Задание_3
+numbers = [1, 4]
+numbers.insert(1, 2)
+numbers.insert(2, 3)
+print(numbers)
+#Задание_4
+#Задание_5
