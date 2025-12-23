@@ -1,0 +1,26 @@
+import random
+
+def start_game():
+    steps = 0
+    valid_commands = {'w': 'прямо', 'a': 'налево', 'd': 'направо'}
+    
+    print("Вы находитесь в таинственном лабиринте. Ваша задача — найти выход.")
+    print("Доступные команды: a, d, w.")
+
+    while True:
+        user_input = input("Куда вы пойдете? ").lower().strip()
+
+        if user_input in valid_commands:
+            steps += 1
+            # Вероятность 1 к 10 (10%)
+            if random.randint(1, 10) == 1:
+                print(f"\nПоздравляем! Выход найден!")
+                print(f"Всего сделано ходов: **{steps}**")
+                break
+            else:
+                print("Выхода пока нет... Куда идти?")
+        else:
+            print("Ошибка: такой кнопки нет. Пожалуйста, выбирайте: w (прямо), a (налево) или d (направо)")
+
+if __name__ == "__main__":
+    start_game()
